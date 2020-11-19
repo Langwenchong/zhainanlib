@@ -522,7 +522,7 @@ export default {
         this.toastText = "账号和密码不能为空！";
         this.showPositionValue = true;
       } else {
-        if (account === "1422257646" && password === "mubei987654321") {
+        if (account === "vip" && password === "iamvip123") {
           this.accountvip = true;
           this.isLogin = true;
           this.width = "10em";
@@ -536,7 +536,7 @@ export default {
           $(".top-nav .btn-bg img").attr("src", this.accounturl);
           $(".top-nav .btn-bg img").css("width", "100%");
           $(".top-nav .btn-bg img").css("height", "100%");
-        } else if (account === "2300546456" && password === "!lwp20010521") {
+        } else if (account === "admin" && password === "admin123") {
           this.accountvip = false;
           this.isLogin = true;
           this.width = "10em";
