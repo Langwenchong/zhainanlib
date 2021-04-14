@@ -9,23 +9,22 @@
       :text="toastText"
       position="center"
     ></toast>
-    <h1>ZN Lib: Become a member, read freely without limit!</h1>
+    <h1>快成为我们的尊贵会员，享受随心所遇的观看体验吧！</h1>
     <div class="message">
-      为了提供更好的阅读体验,我们开发了付费订阅板块,他不同于Hot推荐板块,本版块专注于为每
-      一位会员提供私人定制般的服务,拥有更加完美的阅读体验当然,大大需要为此支付一小丢丢的铜
-      板,毕竟我们也是要恰饭的啦~以下就来为大大讲解一下成为会员的优势吧!
+    为了提供更好的阅读体验，我们开发了付费订阅板块，他不同于Hot推荐板块，本版块专注于为每
+    一位会员提供私人定制般的服务，拥有更加完美的阅读体验当然，大大需要为此支付一小丢丢的铜板，毕竟我们也是要恰饭的啦~下面就来为大大讲解一下成为会员的优势吧！
     </div>
     <div class="container">
       <div class="card">
         <div class="face face1">
           <div class="content">
             <img src="../../static/images/Free-Tag 2.png" />
-            <h3>All Free</h3>
+            <h3>全部免费</h3>
           </div>
         </div>
         <div class="face face2">
           <div class="content">
-            <p>Need to pay to watch the content, VIP members can watch for free, from now on no longer for some content need special fees and in the annoyance ~ become a member, read the massive wonderful content, more can watch more front-line Revelations in advance!</p>
+          <p>开通VIP会员后全站功能均免费无限次使用、优先享受4K画质与专用的高速线路。再也不用抱怨网速低造成的卡顿与辣眼睛的画质啦！</p>
           </div>
         </div>
       </div>
@@ -33,12 +32,12 @@
         <div class="face face1">
           <div class="content">
             <img src="../../static/images/vip1.png" />
-            <h3>Beautiful pendant</h3>
+            <h3>精美饰品</h3>
           </div>
         </div>
         <div class="face face2">
           <div class="content">
-            <p>Members can get exclusive pendants free of charge for dressing up themselves, and the pendants with VIP status can be displayed in the comment area, personal space and other places to fully show their VIP status. You can't buy them even if you have money.</p>
+            <p>开通会员即可免费获得动漫粉丝专属吊坠、彰显VIP身份的服饰等均可在评论区、个人空间等处展示的精美饰品，充分展示VIP身份。土豪气质值的你的拥有！</p>
           </div>
         </div>
       </div>
@@ -46,12 +45,12 @@
         <div class="face face1">
           <div class="content">
             <img src="../../static/images/count.png" />
-            <h3>Goods discount</h3>
+            <h3>更多折扣</h3>
           </div>
         </div>
         <div class="face face2">
           <div class="content">
-            <p>Member period, all items of the House Man Mall enjoy 10% off treatment, and all shipping costs by the studio free, from now on no longer have to worry about shipping costs! More limited when the membership exclusive activities and so you come to participate in oh</p>
+            <p>会员期间，宅曼商城所有项目享受10%优惠待遇，所有运费由工作室免费支付，从此再也不用担心运费了!更多限制会员专属活动时等您来参加哦~</p>
           </div>
         </div>
       </div>
@@ -59,19 +58,19 @@
         <div class="face face1">
           <div class="content">
             <img src="../../static/images/数据 (1).png" />
-            <h3>Accurate recommendation</h3>
+            <h3>专属推荐</h3>
           </div>
         </div>
         <div class="face face2">
           <div class="content">
-            <p>There is the studio dedicated to create the data analysis precision recommendation function, members can view their interest in real time can also enjoy the precision recommendation function, from then on completely away from the book shortage!</p>
+            <p>开通会员即可享受大数据分析的精准推荐功能，会员可以实时查看自己的兴趣也可以享受精准推荐功能，从此彻底摆脱找番的烦恼!</p>
           </div>
         </div>
       </div>
     </div>
     <div
       class="message"
-    >相信大大在看完介绍后,一定会对会员的优势动心了吧?不用担心,我们提供的费用并不高,下面是付费套餐,正值小店刚刚开业起步,我们为大大提供了折扣哦~现在不买,更待何时呢?</div>
+    >相信大大在看完介绍后，一定会对会员的优势动心了吧？不用担心，我们提供的费用并不高，下面是付费套餐，正值小店刚刚开业起步，我们为大大提供了折扣哦~现在不买，更待何时呢？</div>
     <div class="top-up">
       <div class="info">
         <div class="me">
@@ -137,7 +136,7 @@
       </div>
     </div>
     <div class="myzone">
-      <div class="button" @click="enter">Enter My Zone</div>
+      <div class="button" @click="enter">订阅空间</div>
     </div>
   </div>
 </template>
@@ -267,7 +266,6 @@ export default {
   min-height: 100vh;
 }
 #Subscription h1 {
-  margin: 0 auto;
   margin-bottom: 50px;
   padding-top: 30px;
   font-size: 30px;

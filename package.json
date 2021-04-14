@@ -15,9 +15,11 @@
     "font-awesome": "^4.7.0",
     "highlight.js": "^10.1.1",
     "jquery": "^3.5.1",
+    "odometer": "^0.4.8",
     "v-charts": "^1.19.0",
     "vue": "^2.5.2",
     "vue-flipclock": "0.0.1",
+    "vue-odometer": "^1.0.2",
     "vue-router": "^3.0.1",
     "vue2-flip-countdown": "^0.9.3",
     "vux": "^2.9.4"

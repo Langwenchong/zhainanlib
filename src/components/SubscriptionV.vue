@@ -1,26 +1,26 @@
 <template>
   <div id="SubscriptionV">
-    <h1>ZN Vip: Enjoy our own private custom book corner.</h1>
+    <h1>尊贵的VIP大大，欢迎来到专属于您的动漫订阅空间</h1>
     <div class="myinfo">
       <div class="info">
         <div class="me">
           <img src="../../static/images/author.jpg" />
           <div class="name">
             <img class="status" src="../../static/images/vip.png" />
-            <p>Wenchong Lang</p>
+            <p>Pengpenglang</p>
           </div>
         </div>
-        <h2>Rest Time:</h2>
+        <h2>VIP剩余时间:</h2>
       </div>
       <div class="clock">
-        <flip-countdown deadline="2020-12-25 00:00:00"></flip-countdown>
+        <flip-countdown deadline="2021-12-25 00:00:00"></flip-countdown>
       </div>
     </div>
     <div class="analysis">
       <div class="message">
-        虽然作为小破站资金有限,但是我们仍会竭尽全力为每一位支持我们的付费Vip会员提供免费的大数据分析,
-        并且参考数据分析精准推荐客官大大可能较为感兴趣的同类题材的动漫资讯,书籍和影视.如果您对此有什
-        么建设性的建议,还请慷慨分享,工作室的每一位成员都会努力为会员打造一个更加舒适的阅读平台!
+        虽然作为小破站资金有限，但是我们仍会竭尽全力为每一位支持我们的付费Vip会员提供免费的大数据分析，
+        并且参考数据分析精准推荐客官大大可能较为感兴趣的同类题材的动漫资讯，书籍和影视。如果您对此有什
+        么建设性的建议，还请慷慨分享，工作室的每一位成员都会努力为会员打造一个更加舒适的阅读平台！
       </div>
       <div id="cookiechart"></div>
       <div class="advice">
@@ -37,8 +37,8 @@
         </ul>
       </div>
       <div class="message">
-        参考ZN工作室数据团队提供的客官大大的阅读口味偏好数据,
-        我们为您精准推荐以下内容(若推荐内容有偏差还请原谅,我们会努力提高准确率~):
+        宅男工作室结合客官大大您的阅读口味偏好数据,
+        我们为您精准推荐以下内容（若推荐内容有偏差还请原谅，我们会努力提高准确率~）:
       </div>
     </div>
     <div class="masonry">
@@ -57,7 +57,7 @@
       <p>{{text}}</p>
     </div>
     <div class="myzone">
-      <div class="button" @click="backpack">Renewal Service</div>
+      <div class="button" @click="backpack">退出空间</div>
     </div>
   </div>
 </template>
@@ -136,7 +136,7 @@ export default {
   data() {
     return {
       limit: 20,
-      text: "-Load More-",
+      text: "-加载更多-",
       pics: [
         { url: "../../static/images/S1.png" },
         { url: "../../static/images/S2.png" },
@@ -213,18 +213,18 @@ export default {
       advicearray: [
         {
           advisor: "Albert",
-          job: "ZN Lib首席数据分析策划",
+          job: "本站首席数据分析策划",
           pic: "../../static/images/advisor1.jpg"
         },
         {
           advisor: "Philip",
           job: "付费订阅部门技术顾问",
-          pic: "../../static/images/advisor2.png"
+          pic: "../../static/images/advisor2.jpg"
         },
         {
           advisor: "Maria",
-          job: "ZN Lib品牌策划兼副总裁",
-          pic: "../../static/images/advisor3.jfif"
+          job: "本站品牌策划兼副总裁",
+          pic: "../../static/images/advisor3.png"
         }
       ]
     };

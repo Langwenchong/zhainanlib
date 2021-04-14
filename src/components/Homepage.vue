@@ -1,5 +1,12 @@
 <template>
   <div id="Homepage">
+    <div class="preload">
+      <section>
+        <div class="banner">
+          <div class="blocks"></div>
+        </div>
+      </section>
+    </div>
     <toast
       v-model="showPositionValue"
       type="text"
@@ -53,7 +60,7 @@
       </div>
     </div>
     <div class="left-bar">
-      <div class="invest" @click="invest">
+      <div class="invest" @click="toStudio">
         <img src="../../static/images/invest.png" />
       </div>
       <small>512</small>
@@ -83,13 +90,11 @@
         <li @click="move(0)">Hotnews</li>
         <li @click="move(1)">付费订阅</li>
         <li @click="move(2)">特别策划</li>
-        <li @click="move(3)">ZN Store</li>
-        <li @click="move(4)">ZN BBS</li>
       </ul>
     </div>
     <div class="top-nav">
       <div class="nav">
-        <div id="logo" @click="toStudio">
+        <div id="logo">
           <img src="../../static/images/logo.png" alt="logo" />
         </div>
         <div class="menu-hidden" @click="fade">
@@ -107,14 +112,6 @@
           <li @click="move(2)">
             <img src="../../static/images/plan.png" alt="plan" />
             <b>特别策划</b>
-          </li>
-          <li @click="move(3)">
-            <img src="../../static/images/store.png" alt="store" />
-            <b>ZN Store</b>
-          </li>
-          <li @click="move(4)">
-            <img src="../../static/images/BBS.png" alt="BBS" />
-            <b>ZN BBS</b>
           </li>
           <div class="animation"></div>
         </ul>
@@ -145,7 +142,7 @@
         <div class="background-wall1"></div>
         <div class="background-wall2"></div>
         <div class="slidehead">
-          <h1>☆ Daily Recommend:</h1>
+          <h1>☆ 今日份动漫推荐:</h1>
         </div>
         <div class="slidershow middle">
           <div class="slides">
@@ -158,9 +155,7 @@
               <img src="../../static/images/slide1.png" />
               <div class="content">
                 <p class="title">『 天气之子 』</p>
-                <p
-                  class="sub-title"
-                >The weather is unbelievable. Just the look of the sky can change people's mood</p>
+                <p class="sub-title">生活不是一帆风顺，总有磨难在前阻挡，我们要学会坚强努力活在这个世界中，遇见了你我有了依靠明白了存在的价值，谢谢你的陪伴！</p>
                 <button>Read More</button>
               </div>
             </div>
@@ -168,29 +163,23 @@
               <img src="../../static/images/slide2.png" />
               <div class="content">
                 <p class="title">『 言叶之庭 』</p>
-                <p
-                  class="sub-title"
-                >What am I looking forward to, who I am in love with, can not be conveyed, but wishful thinking.</p>
+                <p class="sub-title">但盼风雨来、能留你在此；即使天无雨、我亦留此地。</p>
                 <button>Read More</button>
               </div>
             </div>
             <div class="slide">
               <img src="../../static/images/slide3.png" />
               <div class="content">
-                <p class="title">『 你的名字 』</p>
-                <p
-                  class="sub-title"
-                >I was looking for something, and somehow, I got caught up in this emotion.</p>
+                <p class="title">『 命运石之门 』</p>
+                <p class="sub-title">未来的事情，谁也不知道。正因为如此，就如同再次相见本身，未来才有无限的可能。</p>
                 <button>Read More</button>
               </div>
             </div>
             <div class="slide">
-              <img src="../../static/images/slide4.png" />
+              <img src="../../static/images/slide4.jpg" />
               <div class="content">
-                <p class="title">『 青春猪头少年不会梦到兔女郎学姐 』</p>
-                <p
-                  class="sub-title"
-                >Even a hundred million times won't change. The person I like is mai Yi classmate.</p>
+                <p class="title">『 紫罗兰花园 』</p>
+                <p class="sub-title">花无凋零之日,意无传递之时,爱情亘古不变,紫罗兰与世长存。</p>
                 <button>Read More</button>
               </div>
             </div>
@@ -198,9 +187,7 @@
               <img src="../../static/images/slide5.png" />
               <div class="content">
                 <p class="title">『 烟花 』</p>
-                <p
-                  class="sub-title"
-                >Round or flat or strange. As long as we're together, what do I care.</p>
+                <p class="sub-title">誓言易反心易变,烟花易冷人易散,白云苍狗迷人眼,生而何似仅初见。</p>
                 <button>Read More</button>
               </div>
             </div>
@@ -299,8 +286,8 @@
       <div class="footer">
         <div class="footer-main">
           <div class="left-footer">
-            <img src="../../static/images/logo.png" width="200px" @click="toStudio"/>
-            <p>© 2013-2020 宅男图书馆 | 津ICP备09128966号-4 | CC BY-NC 4.0</p>
+            <img src="../../static/images/logo.png" width="200px" />
+            <p>© 2021 动漫收录馆 | By宅男工作室 | CC BY-NC 4.0</p>
           </div>
           <div class="right-footer">
             <ul>
@@ -335,7 +322,7 @@ export default {
       accountname: "",
       accounturl: "",
       message:
-        "快来参观由宅男工作室打造推出的宅男图书馆吧!点击网址:www.zhainanlib.com即可参观!",
+        "快来参观由pengpenglang打造推出的动漫推荐项目!点击网址:https://pengpenglang.vip/了解更多!",
       width: "10em",
       account: "",
       password: "",
@@ -435,16 +422,33 @@ export default {
       if (that.isLogin) {
         $(".my-menu").css("visibility", "visible");
         $(".my-menu").css("opacity", "1");
-        $('.login').css("opacity","0.7");
+        $(".login").css("opacity", "0.7");
       }
     });
     $(".body").hover(function() {
       if (that.isLogin && $(".my-menu").is(":visible")) {
         $(".my-menu").css("visibility", "hidden");
         $(".my-menu").css("opacity", "0");
-        $('.login').css("opacity","1");
+        $(".login").css("opacity", "1");
       }
     });
+    const pre = document.getElementsByClassName("preload")[0];
+    const banner = document.getElementsByClassName("banner")[0];
+    var blocks = document.getElementsByClassName("blocks");
+    for (let i = 1; i < 400; i++) {
+      banner.innerHTML += "<div class='blocks'></div>";
+      const duration = Math.random() * 3;
+      blocks[i].style.animationDuration = 2 + duration + "s";
+      blocks[i].style.animationDelay = duration + "s";
+    }
+    const section = document.querySelector("section");
+    setTimeout(function() {
+      pre.style.background = "transparent";
+      section.classList.add("active");
+      setTimeout(function(){
+        pre.style.display="none";
+      },5000);
+    }, 9000);
   },
   methods: {
     move(i) {
@@ -471,7 +475,7 @@ export default {
             $(".top-nav").css("top", "0px");
             $(".body").css("padding-top", "0px");
           } else {
-            this.toastText = `☺请登录账号~`;
+            this.toastText = `☺ 请登录账号~`;
             this.showPositionValue = true;
           }
           break;
@@ -499,7 +503,7 @@ export default {
     invest() {
       if (!this.isLogin) {
         this.width = "10em";
-        this.toastText = "☺请登录账号~";
+        this.toastText = "☺ 请登录账号~";
         this.showPositionValue = true;
       }
     },
@@ -526,9 +530,9 @@ export default {
           this.accountvip = true;
           this.isLogin = true;
           this.width = "10em";
-          (this.accountname = `Langwenchong`),
+          (this.accountname = `pengpenglang`),
             (this.accounturl = `../../static/images/author.jpg`);
-          this.toastText = "☺您好,郎文翀大大~";
+          this.toastText = "☺您好,尊贵的pengpenglang大大~";
           this.showPositionValue = true;
           $("#login").css("z-index", "-1");
           $("#login").css("opacity", "0");
@@ -540,9 +544,9 @@ export default {
           this.accountvip = false;
           this.isLogin = true;
           this.width = "10em";
-          (this.accountname = `Langwenpeng`),
-            (this.accounturl = `../../static/images/author1.jpg`);
-          this.toastText = "☺您好,郎文鹏大大~";
+          (this.accountname = `pengpenglang`),
+            (this.accounturl = `../../static/images/author.jpg`);
+          this.toastText = "☺欢迎您,pengpenglang用户~";
           this.showPositionValue = true;
           $("#login").css("z-index", "-1");
           $("#login").css("opacity", "0");
@@ -584,17 +588,17 @@ export default {
     },
     fade() {
       if ($(".top-nav-hidden").height() === 0) {
-        $(".top-nav-hidden").css("height", "280px");
-        $(".top-nav").css("top", "280px");
-        $(".body").css("padding-top", "280px");
+        $(".top-nav-hidden").css("height", "180px");
+        $(".top-nav").css("top", "180px");
+        $(".body").css("padding-top", "180px");
       } else {
         $(".top-nav-hidden").css("height", "0px");
         $(".top-nav").css("top", "0px");
         $(".body").css("padding-top", "0px");
       }
     },
-    toStudio(){
-      this.$router.push('/Studio/Introduction');
+    toStudio() {
+      this.$router.push("/Studio/Introduction");
     }
   }
 };
@@ -990,18 +994,19 @@ export default {
   height: 60px;
   display: flex;
   align-items: center;
-  clip-path: circle(150px at 0% 50%);
+  clip-path: circle(145px at 0% 50%);
   -webkit-clip-path: circle(150px at 0% 50%);
 }
 .top-nav #logo img {
   height: 45px;
+  width: 157px;
   cursor: pointer;
 }
 .top-nav .menu {
   transition: 0.6s;
   position: relative;
   margin: 0px auto;
-  width: 600px;
+  width: 360px;
 }
 .menu-hidden {
   transition: 0.6s;
@@ -1063,7 +1068,7 @@ export default {
   height: 60px;
   display: flex;
   align-items: center;
-  right:250px;
+  right: 250px;
 }
 .search-btn {
   color: #e84118;
@@ -1110,7 +1115,7 @@ a {
   right: 150px;
   height: 60px;
   width: 90px;
-  transition:.5s;
+  transition: 0.5s;
 }
 .top-nav .btn-bg {
   position: relative;
@@ -1322,7 +1327,7 @@ input[name="r"] {
   color: white;
 }
 .slidehead h1:after {
-  content: "☆ Daily Recommend:";
+  content: "☆ 今日份动漫推荐:";
   color: transparent;
   position: absolute;
   left: 0;

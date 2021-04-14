@@ -7,24 +7,22 @@
       </div>
     </div>
     <div id="remarks">
-      <h1>ZN Library:A good day starts with reading！</h1>
+      <h1>动漫收录馆：美好的一天从追番开始！</h1>
       <div id="author">
         <img src="../../static/images/author.jpg" />
       </div>
-      <p class="name">Wenchong·Lang</p>
+      <p class="name">Pengpenglang</p>
       <div class="status">
         <img src="../../static/images/status.png" height="18px" />
         <p>Front-end Developert</p>
       </div>
       <p class="hint">
-        Founded in
+        诞生于
         <i>2020.7.19</i>
       </p>
     </div>
     <blockquote class="intro">
-      <strong>体验不极致:</strong>是的,ZN library还有很多问题，远远不够完美，但是我们一直在努力解决。如果你在体验并且觉得有一些问题，不妨点击右栏反馈issue,我们乐意为此请您喝一杯Coffee!
-      <br />
-      <strong>维护靠个人:</strong>是的，没有团队维护，毕竟一个小破站也只能请得起这种前端小白来维持运营了。但是,谁又不是从一个小白慢慢成长为一个大触呢?当然你可以尝试体验一下,毕竟开发了1Month,一定程度上保障了用户体验的质量。
+      <strong>Hi,there~ </strong> 这里是动漫收录馆，我们致力于为热爱动漫的人们打造一个集推荐与观看等功能于一体的专业动漫网站。喜欢不妨推荐给您周围的小伙伴吧！感谢您一直以来对我们的大力支持！——By Pengpenglang & 宅男工作室
     </blockquote>
     <transition-group>
       <div class="project" v-for="(project,i) in projects" :key="project.title">
@@ -748,7 +746,7 @@ export default {
   border-left: 2px solid #fd281a;
   margin-top: 30px;
   position: relative;
-  height: 180px;
+  height: 80px;
   width: 93%;
   font-size: 18px;
   color: #7f7f7f;
